@@ -1,13 +1,16 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -std=c11
 
-all: cipher float_representation
+all: caesar break_caesar bits_change
 
-cipher: cipher.c
-	$(CC) $(CFLAGS) cipher.c -o cipher
+caesar: caesar.c
+	$(CC) $(CFLAGS) caesar.c -o caesar
 
-float_representation: float_representation.c
-	$(CC) $(CFLAGS) float_representation.c -o float_representation
+break_caesar: break_caesar.c
+	$(CC) $(CFLAGS) break_caesar.c -o break_caesar
+
+bits_change: bits_change.c
+	$(CC) $(CFLAGS) bits_change.c -o bits_change
 
 clean:
-	rm -f cipher float_representation
+	rm -f caesar break_caesar bits_change
