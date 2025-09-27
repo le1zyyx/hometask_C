@@ -17,7 +17,7 @@ int main() {
             printf("Invalid input: must be a valid alphabetic character\n");
             continue;
         }
-        char base = islower(c) ? 'a' : 'a';
+        char base = islower(c) ? 'a' : 'A';
         char encrypted = ((tolower(c) - 'a' + key) % 26 + 26) % 26 + base;
         printf("Encrypted character: %c\n", encrypted);
         i++;
